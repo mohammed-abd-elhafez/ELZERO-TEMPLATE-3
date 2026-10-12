@@ -1,0 +1,155 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* start navbar */
+.navbar {
+    height: 104px;
+    max-height: 100%;
+    z-index: 9999;
+    max-height: 100%;
+}
+.collapse .main-nav > li > a {
+    position: relative;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+color: black !important;
+}
+.collapse .main-nav > li > a::before {
+    content: '';
+position: absolute;
+width: 100%;
+height: 4px;
+top: 0;
+background-color: #0D6EFD;
+left: -100%;
+transition: 0.4s;
+}
+
+.collapse .main-nav > li > a:hover:before{
+    left: 0;
+}
+
+.collapse .main-nav >li > a:hover {
+background-color: #0d6dfd0a !important;
+    
+}
+/* end navbar */
+
+
+/* start landing */
+.landing {
+position: relative;
+}
+.landing .container {
+display: flex;
+align-items: center;
+min-height: calc(100vh - 61px);
+padding-bottom: 120px;
+}
+.landing::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ececec;
+    z-index: -1;
+    top: 0px;
+    left: 0;
+    transform: skewY(-6deg);
+transform-origin: top left;
+}
+.landing .container .text {
+flex: 1;
+}
+@media (max-width: 767px) {
+    .landing .container .text {
+text-align: center;
+    }
+}
+.landing h1 {
+font-weight: bold;
+margin: 0;
+letter-spacing: -2px;
+}
+
+.landing p {
+    font-size: 20px;
+    margin: 10px 0 0;
+    color: #666;
+    line-height: 1.7;
+    max-width: 500px;
+}
+@media (max-width: 767px) {
+    .landing h1 {
+font-size: 30px;
+    }
+    .landing p {
+        font-size: 19px;
+        margin: 5px auto;
+    }
+}
+
+.landing .image img {
+    width: 600px;
+    max-width: 100%;
+}
+@media (max-width: 767px) {
+    .landing .image img {
+        display: none;
+    }
+}
+
+.landing .go-down {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition: 0.3s;
+    padding-bottom: 30px;
+}
+.landing .go-down a:hover {
+    color: #18A1B7;
+}
+/* end landing */
+
+.video {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.video  .container {
+    border: 2px solid #797272;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    max-width: 200px;
+}
+
+.video  .container button {
+    display: block;
+    max-width: 100%;
+    margin: 10px auto;
+    background-color: #0D6EFD;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.video video {
+    margin: 10px auto;
+    max-width: 100%;
+
+}
